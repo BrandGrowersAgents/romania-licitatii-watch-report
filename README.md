@@ -1,1 +1,1 @@
-# romania-licitatii-watch-report
+Pagini generate automat.

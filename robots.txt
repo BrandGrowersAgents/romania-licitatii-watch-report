@@ -1,0 +1,4 @@
+# Fără Disallow: crawlerele trebuie să poată citi meta noindex de pe fiecare pagină.
+User-agent: *
+Allow: /
+Noindex: /
