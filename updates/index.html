@@ -70,6 +70,7 @@ document.querySelectorAll('[data-deadline]').forEach(function(el){
  var n=Math.round((d-t)/86400000);el.classList.remove('ok','warn','bad');
  if(n<0){el.textContent='termen depasit';el.classList.add('bad')}
  else{el.textContent='⏳ '+n+(n===1?' zi ramasa':' zile ramase');el.classList.add(n<=7?'warn':'ok')}});
+document.querySelectorAll('details.city[open]').forEach(function(d){d.open=false});
 var h=location.hash.slice(1);if(h){var el=document.getElementById(h);if(el){for(var p=el.parentElement;p;p=p.parentElement){if(p.tagName==='DETAILS')p.open=true}
  el.classList.add('hl');setTimeout(function(){el.scrollIntoView({block:'center'})},30)}}})();
 </script>
