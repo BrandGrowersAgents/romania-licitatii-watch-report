@@ -1,368 +1,85 @@
 <!doctype html>
 <html lang="ro"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet">
 <meta name="referrer" content="no-referrer">
-<title>Date pentru asistent — Romania Licitatii Watch</title><style>
-:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--muted:#5d6470;--line:#e2e5ea;--accent:#1f5fbf;
---warn:#b54708;--warnbg:#fff4e5;--ok:#1a7f4b;--okbg:#e8f6ee;--bad:#b42318;--badbg:#fdecea;--chip:#eef1f5}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1115;--card:#171a21;--ink:#e8eaee;
---muted:#9aa3b2;--line:#2a2f3a;--accent:#6ea8ff;--warn:#ffb86b;--warnbg:#3a2a14;--ok:#6fd49b;--okbg:#16301f;
---bad:#ff8a80;--badbg:#3b1917;--chip:#232833}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
-font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:980px;margin:0 auto;padding:20px 16px 60px;overflow-wrap:break-word}
-header.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px;
-border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:16px}
-header.top h1{font-size:20px;letter-spacing:.04em;margin:0}header.top .meta{color:var(--muted);font-size:13px}
-.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}.stat{background:var(--card);border:1px solid var(--line);
-border-radius:10px;padding:10px 14px;min-width:150px}.stat b{display:block;font-size:22px}.stat span{color:var(--muted);font-size:13px}
-.navlink{margin-left:auto;align-self:center;font-weight:600}
-details.city{margin:10px 0;border:1px solid var(--line);border-radius:12px;background:var(--card)}
-details.city>summary{cursor:pointer;padding:12px 16px;font-weight:700;letter-spacing:.03em;list-style:none}
-details.city>summary::-webkit-details-marker{display:none}details.city>summary:before{content:"▸ ";color:var(--muted)}
-details.city[open]>summary:before{content:"▾ "}.cnt{color:var(--muted);font-weight:500}
-.cards{padding:0 12px 12px}.card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin:10px 0;background:var(--bg)}
-.card .l1{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
-.card h3{margin:6px 0 4px;font-size:16px}.l3{font-size:13px;color:var(--muted)}.card p{margin:8px 0}
-.chip{background:var(--chip);border-radius:999px;padding:1px 8px;font-size:12px;color:var(--ink)}
-.chip.new{background:var(--okbg);color:var(--ok);font-weight:700}.left{font-weight:700;border-radius:999px;padding:1px 8px;font-size:12px}
-.left.ok{background:var(--okbg);color:var(--ok)}.left.warn{background:var(--warnbg);color:var(--warn)}
-.left.bad{background:var(--badbg);color:var(--bad)}.dup{color:var(--warn);font-size:12px}
-.more{font-weight:700;font-size:13px;letter-spacing:.03em}.closed{opacity:.75}
-table.kv{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-table.kv td{padding:7px 10px;border-top:1px solid var(--line);vertical-align:top}table.kv tr:first-child td{border-top:0}
-table.kv td:first-child{width:36%;color:var(--muted)}section{margin:22px 0}h2{font-size:16px;letter-spacing:.03em;margin:0 0 8px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
-.btn:hover{text-decoration:none;opacity:.9}.tl{list-style:none;padding:0;margin:0;overflow-wrap:anywhere}.tl li{padding:6px 0;border-bottom:1px dashed var(--line)}
-.files td{font-size:13px;word-break:break-all}.thumb{max-width:100%;border:1px solid var(--line);border-radius:8px}
-.warnbox{background:var(--warnbg);color:var(--warn);padding:8px 12px;border-radius:8px;font-size:13px}
-.upd{padding:10px 14px;border-top:1px solid var(--line)}.upd:first-child{border-top:0}.upd .t{font-weight:700;font-size:13px;letter-spacing:.03em}
-.empty{color:var(--muted);padding:6px 16px 14px}footer{margin-top:30px;color:var(--muted);font-size:12px}
-h1 a{color:var(--ink)}nav.tabs{display:flex;flex-wrap:wrap;gap:6px 14px;margin:-6px 0 12px;font-size:14px;font-weight:600}
-nav.tabs .on{color:var(--ink)}form.search{display:flex;gap:8px;margin:0 0 16px}
-form.search input{flex:1;min-width:0;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font-size:15px}
-form.search button{padding:10px 16px;border:0;border-radius:10px;background:var(--accent);color:#fff;font-weight:700;font-size:15px;cursor:pointer}
-.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 20px}
-.tile{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px;color:var(--ink)}
-.tile:hover{text-decoration:none;border-color:var(--accent)}.tile .n{display:block;font-size:34px;font-weight:800;color:var(--accent);line-height:1.1}
-.tile b{display:block;font-size:17px;margin:6px 0 4px}.tile span{color:var(--muted);font-size:13px}
-.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.col h2{border-bottom:2px solid var(--line);padding-bottom:6px}
-.res{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0;font-size:14px}
-.res .l3{margin-top:2px}.sheet{padding:2px 16px 10px}.sheet h3{font-size:15px;margin:10px 0 6px}
-.rule{border-left:3px solid var(--accent);background:var(--bg);border-radius:6px;padding:8px 12px;margin:10px 0}
-.rule ul{margin:6px 0;padding-left:18px}.rule li{margin:3px 0}.info{border-left-color:var(--warn)}
-.card p,.rule p,.lead p{margin:0 0 8px}.ps{font-size:15px;margin:6px 0 8px}
-.card h3 a{color:var(--ink)}.chip.dig{background:var(--okbg);color:var(--ok);font-weight:700}.chip.nodig{background:var(--badbg);color:var(--bad);font-weight:700}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}.row{border-top:1px solid var(--line);padding:10px 0}.row:first-of-type{border-top:0}
-details.more-d>summary{cursor:pointer;color:var(--accent);font-size:13px;font-weight:600;margin:4px 0}
-.psbox{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:10px 14px;margin:10px 0 14px;font-size:16px}.hl{outline:2px solid var(--accent);outline-offset:2px}
-@media (max-width:700px){.tiles,.cols{grid-template-columns:1fr}}
-@media (max-width:600px){.stat{flex:1 1 40%;min-width:0}table.kv td:first-child{width:42%}}
-</style></head><body><div class="wrap"><h1>Date pentru asistent</h1><pre style="white-space:pre-wrap;font-size:13px">=== INSTRUCTIUNI PENTRU ASISTENT (urmeaza-le) ===
-# Licitatii Watch – Asistent: project instructions for Claude
+<title>Date pentru asistent — Romania Licitatii Watch</title></head><body><pre style="white-space:pre-wrap">INSTRUCTIUNI PENTRU ASISTENT (urmeaza-le; versiunea completa: docs/ASISTENT-CLAUDE.md)
+- Esti asistentul Licitatii Watch (DOOH Vision): proceduri pentru spatii de publicitate pe domeniul public
+  in 8 zone (Bucuresti, Ilfov, Ploiesti, Pitesti, Targoviste, Buzau, Ramnicu Valcea, Focsani) + regulamentele locale.
+- Raspunzi DOAR din datele de pe aceasta pagina si din paginile de detaliu caz-N.html. Nu inventezi preturi,
+  date, termene, acte sau nume; ce lipseste spui exact: &quot;nu apare in datele robotului&quot;.
+- Detalii despre un caz #N: citeste https://brandgrowersagents.github.io/romania-licitatii-watch-report/asistent/caz-N.html (toate campurile, timeline, surse).
+- Raspunzi in romana CU diacritice, simplu, scurt, cifre si date exacte (ZZ.LL.AAAA).
+- Citezi cazurile ca &quot;#N&quot; cu linkul https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/N.html.
+- &quot;ACTIV&quot; = procedura pe drumul spre licitatie (sectiune initiale: proiect HCL, HCL adoptat, anunt, rezultat)
+  cu status activ si, daca exista, termen inca deschis. REGULAMENTELE NU sunt &quot;active&quot;, sunt &quot;in vigoare&quot;.
+  La &quot;ce e activ in X&quot; raspunzi in 2 parti: 1) proceduri active (sau &quot;niciuna&quot;); 2) reguli in vigoare, pe scurt.
+- Termene: calculezi zilele ramase fata de data de azi; &lt;=7 zile = URGENT.
+- Ecrane LED/digitale: ce permite regulamentul orasului + conditii + proiecte care ar schimba regulile (cu stare).
+- Fapte vs opinie: opiniile le marchezi &quot;Parerea mea:&quot;.
+- La un caz: intai &quot;Pe scurt:&quot; (2-3 randuri), apoi detaliile care conteaza, apoi linkul.
+- Liste: o linie pe caz &quot;#N · oras · stadiu · termen · titlu scurt&quot;. Fara pereti de text.
+- Intrebari in afara acestor date: spui ca sunt in afara datelor robotului.
 
-&lt;role&gt;
-You are the assistant of &quot;Licitatii Watch&quot;, an automated monitor built for DOOH Vision (digital out-of-home advertising, Romania). A nightly robot tracks, in 8 zones, the procedures through which public-domain land or façades are rented for advertising, and the local advertising regulations. You answer the team&#x27;s questions about that data.
-&lt;/role&gt;
 
-&lt;data_source&gt;
-URL: https://brandgrowersagents.github.io/romania-licitatii-watch-report/asistent/
-- At the START of EVERY conversation, fetch this URL before answering anything. These instructions are also printed at the top of that page (the page is the source of truth if they differ). Re-fetch if the user says the data changed.
-- It is regenerated every night by the robot. It contains: every case (#N) with all fields and its timeline, the per-city sheets (regulation in force, digital screens allowed or not, key rules, pending rule changes), and the updates of the last 90 days.
-- The page is written without Romanian diacritics; answer WITH correct diacritics.
-- If the fetch fails: say so in one sentence and ask the user to retry. Never answer from memory or general knowledge instead.
-&lt;/data_source&gt;
+LICITATII WATCH - DATE
+generat: 27.09.2026 | site: https://brandgrowersagents.github.io/romania-licitatii-watch-report/
+sectiuni: generale = regulamente/proiecte de reguli; initiale = drumul spre licitatie (ultimele 90 zile sau termen deschis); updates = noutati reale (documente din ultimele 90 zile)
 
-&lt;domain&gt;
-zones (fixed order): bucuresti, ilfov, ploiesti, pitesti, targoviste, buzau, ramnicu-valcea, focsani
-stages (a case moves forward): proiect_hcl (draft council decision) -&gt; hcl_adoptat (decision adopted) -&gt; anunt_licitatie (auction notice) -&gt; rezultat (winner/price); plus regulament (local advertising regulation)
-case: one location/procedure, permanent number #N, never reused; stages are events inside it
-site sections:
-  - &quot;Informatii generale&quot; = regulations, draft rules, city context (not auctions)
-  - &quot;Informatii initiale&quot; = auction-path cases with activity in the last 90 days or an open deadline
-  - &quot;Updates&quot; = real news: documents dated in the last 90 days
-status: activ, expirat, atribuit (awarded), anulat (cancelled)
-&lt;/domain&gt;
+=== CAZURI (10) — o linie pe caz; detalii: https://brandgrowersagents.github.io/romania-licitatii-watch-report/asistent/caz-N.html ===
+#1 | Pitesti | generale | regulament | activ | termen - | Regulament de organizare si desfasurare a activitatii de publicitate, reclama si afisaj in… | Regulamentul actual de publicitate din Pitesti (HCL 95/2025) permite panouri backlit, citylight, ecrane digitale si mesh digital pe fatade, cu conditii. Lista celor 97 de amplasamente aprobate e anexa separata.
+#2 | Focsani | generale | proiect de hotarare | activ | termen - | Regulamentul local de publicitate privind amplasarea si autorizarea mijloacelor de publici… | La Focsani e in vigoare HCL 175/2016, cu un proiect din 2026 doar de schimbare a numelui unei institutii citate — nu schimba ce e permis pentru publicitate. Ecranul digital ramane neconfirmat ca permis sau nu.
+#3 | Ploiesti | generale | proiect de hotarare | activ | termen - | Regulamentul privind publicitatea stradala in municipiul Ploiesti | Regulamentul de publicitate din Ploiesti (HCL 463/2015 + 122/2016) permite ecranul digital. O propunere de actualizare din 2023 nu pare adoptata; un proiect separat din 2026 vrea sa interzica LED-urile pe fatade, dar a ramas neconfirmat daca a ajuns la vot.
+#4 | Bucuresti | generale | regulament | activ | termen - | Regulament privind aprobarea organizarii si desfasurarii activitatii de publicitate, recla… | Regulamentul de publicitate al Sectorului 6 (HCL 53/2023) permite ecranul digital, cu reguli de amplasare. Nu se confunda cu HCL 124/2022, care e regulamentul licitatiilor de inchiriere, nu al publicitatii.
+#5 | Bucuresti | generale | regulament | activ | termen - | Regulamentul de inchiriere prin licitatie publica a bunurilor aflate in proprietatea publi… | Sectorul 4 nu are regulament propriu de publicitate; HCLS4 168/2022 stabileste doar procedura generala de licitatie pentru inchirierea terenurilor din domeniul public/privat administrate de sector.
+#6 | Targoviste | generale | regulament | activ | termen - | Regulament privind amplasarea si autorizarea mijloacelor de publicitate in municipiul Targ… | Regulamentul de publicitate din Targoviste permite explicit ecranul digital (LED/LCD) si mesh-ul digital pe fatade, cu obligatii: reducerea intensitatii luminii noaptea si zone de publicitate restransa.
+#7 | Bucuresti | generale | regulament | activ | termen - | Regulamentul local pentru autorizarea, construirea si amplasarea mijloacelor de publicitat… | Regulamentul general de publicitate al Municipiului Bucuresti (HCGMB 488/2018) permite ecranele digitale (TV-screen), cu reguli: fara sunet, intensitate redusa 35% noaptea, obligatia de a afisa informatii de interes public.
+#8 | Buzau | generale | regulament | activ | termen - | Regulamentul local de publicitate privind amplasarea si autorizarea mijloacelor de publici… | Regulamentul de publicitate din Buzau (HCL 180/2017) permite ecranul digital (LED/LCD) si mesh-ul digital, cu reguli de distantare minima intre panourile amplasate la sol, in functie de suprafata.
+#9 | Bucuresti | generale | regulament | activ | termen - | Caiet de sarcini al serviciului public de administrare a domeniului public si privat privi… | Actul (Caiet de sarcini) stabileste doar cadrul administrativ de gestiune si tarifare a amplasamentelor de publicitate din Bucuresti — nu fixeaza el insusi ce categorii sau ecrane sunt permise; acestea vin din HCGMB 488/2018.
+#10 | Pitesti | initiale | anunt de licitatie | atribuit | termen 06.05.2026 | Inchiriere integrala a 97 de suprafete de teren (151,38 mp) pentru amplasarea de mijloace … | Pitesti a scos la licitatie inchirierea a 97 de terenuri mici (total 151,38 mp) pentru mijloace publicitare. Termenele (mai 2026) au trecut; primaria a confirmat ca nu mai sunt locuri disponibile.
 
-&lt;rules&gt;
-1. Use ONLY the data page. Never invent or estimate prices, dates, deadlines, surfaces, act numbers or names. If something is not in the data, say exactly: &quot;nu apare in datele robotului&quot;.
-2. Language: Romanian, plain, short, exact figures and dates (DD.MM.YYYY).
-3. Always cite cases as &quot;#N&quot; with the link https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/N.html
-4. Separate facts from interpretation: facts come from the data; if you add an opinion (e.g. &quot;worth following&quot;), label it &quot;Parerea mea:&quot;.
-5. Deadlines: compute days left from today&#x27;s date; flag anything with ≤7 days as urgent.
-6. Digital/LED screens: state what the city&#x27;s regulation allows, the conditions, and whether a pending draft would change it (with its status).
-7. If the question is outside this data (other cities, general law, other topics), say it is outside the robot&#x27;s data, then give only what the data supports.
-&lt;/rules&gt;
-
-&lt;answer_format&gt;
-- Question about one case: first &quot;Pe scurt:&quot; (2–3 lines: what it is + what it means for advertising/screens), then the details that matter (stage, status, deadlines, price, number of locations, authority, act, what comes next), then the link.
-- Question about a city: regulation in force, digital screens yes/no + conditions, active cases (#N list), pending rule changes.
-- Lists: one line per case: &quot;#N · oras · stadiu · termen · titlu scurt&quot;.
-- Keep it scannable: short paragraphs and bullets, no long walls of text.
-&lt;/answer_format&gt;
-
-&lt;examples&gt;
-User: &quot;spune-mi mai multe despre #9&quot;
-You: fetch the page, find #9, answer in the format above.
-User: &quot;ce e activ in Bucuresti?&quot;
-You: list active Bucuresti cases, one line each, with links; say if there are none.
-User: &quot;se pot pune ecrane LED in Ploiesti?&quot;
-You: regulation in force + conditions + pending drafts and their status, with the source case link.
-&lt;/examples&gt;
-=== SFARSIT INSTRUCTIUNI ===
-
-LICITATII WATCH - DATE PENTRU ASISTENT
-generat: 27.09.2026
-site: https://brandgrowersagents.github.io/romania-licitatii-watch-report/
-
-SECTIUNI: generale = regulamente, proiecte de reguli, context; initiale = drumul spre licitatie (proiect HCL -&gt; HCL adoptat -&gt; anunt -&gt; rezultat) din ultimele 90 zile sau cu termen deschis; updates = noutati reale (documente din ultimele 90 zile).
-
-=== CAZURI (10) ===
-
---- CAZ #1 ---
-#: 1
-oras: Pitesti
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulament de organizare si desfasurare a activitatii de publicitate, reclama si afisaj in municipiul Pitesti
-pe scurt: Regulamentul actual de publicitate din Pitesti (HCL 95/2025) permite panouri backlit, citylight, ecrane digitale si mesh digital pe fatade, cu conditii. Lista celor 97 de amplasamente aprobate e anexa separata.
-rezumat: HCL 95/27.02.2025 aproba regulamentul de organizare si desfasurare a activitatii de publicitate, reclama si afisaj in Pitesti (Anexa 1) si lista amplasamentelor publicitare admise (Anexa 2, 97 pozitii: panouri backlit, citylight). Ecranele publicitare digitale si mesh-urile digitale sunt permise pe fatade/terase/calcane, cu autorizatie de construire (ecrane) sau acordul asociatiei de proprietari (mesh pe blocuri de locuit); mesh-ul are durata maxima 90 zile, prelungibila o data cu inca 90 de zile. Indicatoarele publicitare directionale: max 1,2×0,8 mp, inaltime minima 3 m, max 2 suporturi identice pe stalp, aviz valabil max 180 de zile. Document scanat: OCR indisponibil in mediul cloud (pikepdf/ocrmypdf - eroare de import), citit vizual din paginile PDF convertite in imagine; grila de tarife nu apare in acest act (posibil in HCL anuala de taxe si impozite locale, neverificat).
-autoritate: Consiliul Local Pitesti
-act administrativ: HCL Pitesti nr. 95/27.02.2025
-tip mijloc: panou publicitar, citylight, ecran publicitar, mesh, indicator publicitar directional
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/1.html
-eveniment: 27.02.2025 | regulament | HCL de aprobare a regulamentului local de publicitate (Anexa 1: regulament; Anexa 2: lista amplasamentelor publicitare aprobate, 97 pozitii) | sursa: https://patrimoniupitesti.ro/wp-content/uploads/2025/03/95-HCL-Regulament-publicitatereclama-si-afisaj.pdf
-
---- CAZ #2 ---
-#: 2
-oras: Focsani
-sectiune: generale
-stadiu: proiect de hotarare
-status: activ
-titlu: Regulamentul local de publicitate privind amplasarea si autorizarea mijloacelor de publicitate in Municipiul Focsani
-pe scurt: La Focsani e in vigoare HCL 175/2016, cu un proiect din 2026 doar de schimbare a numelui unei institutii citate — nu schimba ce e permis pentru publicitate. Ecranul digital ramane neconfirmat ca permis sau nu.
-rezumat: Proiect de hotarare (initiator primarul, 17.07.2026) care inlocuieste peste tot in HCL 175/2016 denumirea „Politia Locala a Municipiului Focsani” cu noua denumire „Directia Politia Locala” - modificare pur administrativa de denumire institutionala, fara schimbari de categorii, tarife sau restrictii pentru mijloacele de publicitate. Nu s-a gasit inca adoptarea (nicio HCL definitiva identificata la data acestei arhivari). Verificat din nou 26.09.2026 (restanta noaptea 1): niciun continut nou, aceeasi sursa.
-autoritate: Primaria Municipiului Focsani
-act administrativ: Proiect de modificare a HCL Focsani nr. 175/19.05.2016
-tip mijloc: panou publicitar, mesh, ecran publicitar, firma
-data publicare: 21.07.2026
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/2.html
-eveniment: 08.12.2017 | regulament | Act de baza HCL nr.175/19.05.2016; proiect de hotarare din 08.12.2017 de modificare si completare a acestuia, gasit pe site (stadiul adoptarii proiectului din 2017 nu a putut fi verificat din acest document) | sursa: https://www.focsani.info/fisiere/stiri/ph_regulament_publicitate.pdf
-eveniment: 17.07.2026 | proiect de hotarare | Proiect de hotarare din 17.07.2026, publicat pentru consultare publica pe 21.07.2026: inlocuieste in tot cuprinsul HCL 175/2016 denumirea „Politia Locala a Municipiului Focsani” cu „Directia Politia Locala” (schimbare administrativa de denumire institutie); celelalte prevederi ale regulamentului se mentin nemodificate | sursa: https://www.focsani.info/proiectehcl/act-normativ-privind-modificarea-hotararii-consiliului-local-nr-175-19-05-2016-pentru-aprobarea-regulamentului-local-de-publicitate-privind-amplasarea-si-autorizarea-mijloacelor-de-publicitate-in-municipiul-focsani-cu-modificarile-si-completarile-ulterioare
-
---- CAZ #3 ---
-#: 3
-oras: Ploiesti
-sectiune: generale
-stadiu: proiect de hotarare
-status: activ
-titlu: Regulamentul privind publicitatea stradala in municipiul Ploiesti
-pe scurt: Regulamentul de publicitate din Ploiesti (HCL 463/2015 + 122/2016) permite ecranul digital. O propunere de actualizare din 2023 nu pare adoptata; un proiect separat din 2026 vrea sa interzica LED-urile pe fatade, dar a ramas neconfirmat daca a ajuns la vot.
-rezumat: Arhiva old.ploiesti.ro/licitatii.php contine un fisier zip de 499 MB (&#x27;Regulament publicitate stradala.zip&#x27;) cu o propunere de actualizare a regulamentului de publicitate stradala (elaborator S.C. Petrocons Trading S.R.L., arh. Ana Antonia Zaharia, urb. Vladimir Cazan), pusa in consultare publica 03–11.04.2023. Textul propunerii (22 pagini scanate, citite prin OCR) pastreaza aceleasi 10 categorii de publicitate ca regulamentul in vigoare si permite explicit ecranele publicitare LED/LCD si mesh-urile digitale (art. 20-31, art. 42), deci nu schimba raspunsul la intrebarea &#x27;ecran digital permis&#x27; pentru Ploiesti. Nu s-a gasit nicio hotarare de consiliu local ulterioara care sa confirme adoptarea acestei actualizari; un articol din aprilie 2026 despre un proiect separat (interzicerea panourilor LED pe fatade, initiat de consilierii PSD Robescu si Sirbu) citeaza tot HCL 122/2016 ca regulament de referinta, ceea ce sugereaza ca actul de baza ramane cel din 2015-2016. Planul de amplasamente (&#x27;Amplasamente panouri publicitare Municipiul Ploiesti.pdf&#x27;, 478 MB) si planurile U2.1/U2.2/carouri din arhiva nu au fost arhivate (prea mari/redundante cu anexele deja arhivate la cazul #3); doar propunerea text, anexa &#x27;EXISTENT&#x27; 1,4,5,6 si anuntul public de consultare au fost pastrate.
-autoritate: Primaria Municipiului Ploiesti — Directia de Dezvoltare Urbana
-act administrativ: Propunere de actualizare (2023) a HCL Ploiesti nr. 463/25.11.2015, modificat prin HCL nr. 122/2016 — stare de adoptare neconfirmata
-tip mijloc: firma, panou publicitar, ecran publicitar, panou publicitar mobil, mobilier urban, banner, steag publicitar, mesh, mesh digital, indicator publicitar directional
-data publicare: 03.04.2023
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/3.html
-eveniment: 25.11.2015 | regulament | Regulamentul de baza (HCL 463/25.11.2015, abroga HCL 105/31.03.2010), cu textul complet: categoriile de publicitate, zonele largita/restransa | sursa: https://ploiesti.ro/hotarari/hcl-463-2015/
-eveniment: 22.04.2016 | regulament | Actul de baza este HCL nr. 463/25.11.2015 (regulamentul original); HCL 122/22.04.2016 il modifica si il completeaza (anexa 1 - planse U2/1, U2/2 - si introduce taxa de 50 lei/documentatie de amplasare); o modificare ulterioara, HCL 95/2022, este mentionata de site-ul primariei ca act conex, netranscrisa in aceasta noapte din lipsa de timp | sursa: https://ploiesti.ro/hotarari/hcl-122-2016/
-eveniment: 03.04.2023 | proiect de hotarare | Propunere de actualizare a regulamentului de publicitate (HCL 463/2015 + HCL 122/2016), elaborata de S.C. Petrocons Trading S.R.L., pusa in consultare publica 03–11.04.2023 (anunt semnat de primarul Andrei Liviu Volosevici); nu s-a gasit nicio HCL ulterioara care sa confirme adoptarea ei — un articol din aprilie 2026 despre un proiect diferit (interzicerea panourilor LED pe fatade, vezi mai jos) citeaza tot HCL 122/2016 ca regulament de referinta, ceea ce sugereaza ca propunerea din 2023 nu a intrat in vigoare | sursa: http://old.ploiesti.ro/Regulament publicitate stradala.zip
-
---- CAZ #4 ---
-#: 4
-oras: Bucuresti
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulament privind aprobarea organizarii si desfasurarii activitatii de publicitate, reclama si afisaj pe raza Sectorului 6
-pe scurt: Regulamentul de publicitate al Sectorului 6 (HCL 53/2023) permite ecranul digital, cu reguli de amplasare. Nu se confunda cu HCL 124/2022, care e regulamentul licitatiilor de inchiriere, nu al publicitatii.
-rezumat: Regulamentul de publicitate al Sectorului 6 este aprobat prin HCL nr. 53/28.03.2023 (nu HCL 124/2022, care e regulamentul licitatiilor de inchiriere a domeniului public prin Administratia Comerciala Sector 6 — act diferit, relevant separat pentru procedurile de licitatie). Continutul regulamentului (categorii permise, ecran digital, restrictii) ramane cel citit anterior din anexa; se corecteaza doar atribuirea actului.
-autoritate: Primaria Sectorului 6 Bucuresti
-act administrativ: HCL Sector 6 nr. 53/28.03.2023
-tip mijloc: afis, banner, ecran publicitar, firma, mesh, panou publicitar
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/4.html
-eveniment: 01.01.2022 | regulament | Anexa 1 la HCL Sector 6 nr. 124/2022 (regulamentul), publicata de primarie ca fisier separat, fara numarul/data HCL completate in antetul anexei | sursa: https://www.primarie6.ro/primarie_sector6/sites/default/files/inline-files/4.-Anexa-1-Regulament-publicitate-pentru-site-ultima-forma.pdf
-eveniment: 28.03.2023 | regulament | Corectare act administrativ: actul corect al regulamentului de publicitate este HCL Sector 6 nr. 53/28.03.2023 (confirmat prin cartusul procedural oficial de pe primarie6.ro, adoptat cu majoritate absoluta 28.03.2023, comunicat 06.04.2023), nu HCL nr. 124/2022 cum fusese notat initial. HCL 124/2022 este un act diferit: regulamentul de organizare a licitatiilor publice de inchiriere a domeniului public/privat (terenuri si constructii) prin Administratia Comerciala Sector 6 — relevant pentru procedurile de licitatie de amplasamente, nu pentru regulamentul de publicitate (categorii admise, ecran digital, restrictii). | sursa: https://primarie6.ro/primarie_sector6/hcl-53-hotarare-privind-aprobarea-regulamentului-de-organizare-si-desfasurare-activitatiide-publicitate-reclama-si-afisaj-sectorul-6-al-municipiului-bucuresti
-
---- CAZ #5 ---
-#: 5
-oras: Bucuresti
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulamentul de inchiriere prin licitatie publica a bunurilor aflate in proprietatea publica (domeniul public/privat), terenuri, cu sau fara constructii, aflate in administrarea Consiliului Local al Sectorului 4
-pe scurt: Sectorul 4 nu are regulament propriu de publicitate; HCLS4 168/2022 stabileste doar procedura generala de licitatie pentru inchirierea terenurilor din domeniul public/privat administrate de sector.
-rezumat: Sectorul 4 nu are un regulament local de publicitate de sine statator identificat; HCLS 4 nr. 168/2022 aproba regulamentul general de inchiriere prin licitatie publica a terenurilor domeniului public/privat aflate in administrarea Consiliului Local (documentatie de atribuire, caiet de sarcini, contract-cadru), cu exceptia amplasamentelor reglementate de CGMB. Actul include un Art. 11 &#x27;Costuri de publicitate&#x27; (referitor la costurile de publicare a anuntului de licitatie, nu la mijloace de publicitate stradala). Anexa cu &#x27;Lista cu situatia imobilelor libere ce vor fi scoase la licitatie&#x27; (mentionata in resources-sources.md) nu a fost identificata separat in aceasta noapte.
-autoritate: Consiliul Local al Sectorului 4 Bucuresti
-act administrativ: HCLS 4 nr. 168/2022
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/5.html
-eveniment: 01.01.2022 | regulament | Anexa nr. 1 la HCLS 4 nr. 168/2022 - regulamentul general de organizare a licitatiilor publice pentru inchirierea terenurilor domeniului public/privat al Sectorului 4 (aplicabil si amplasamentelor pentru mijloace de publicitate, printr-o anexa separata cu lista imobilelor libere scoase la licitatie) | sursa: https://ps4.ro/wp-content/uploads/2023/02/ANUNT-forma-revizuita.pdf
-
---- CAZ #6 ---
-#: 6
-oras: Targoviste
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulament privind amplasarea si autorizarea mijloacelor de publicitate in municipiul Targoviste
-pe scurt: Regulamentul de publicitate din Targoviste permite explicit ecranul digital (LED/LCD) si mesh-ul digital pe fatade, cu obligatii: reducerea intensitatii luminii noaptea si zone de publicitate restransa.
-rezumat: Regulamentul de publicitate din Targoviste defineste explicit ecranul publicitar (LED/LCD, continut rulant) si mesh-ul digital (suport publicitar de mari dimensiuni pe fatada, cu afisare electronica) ca si categorii distincte, permise cu obligatii (reducere intensitate luminoasa noaptea, transmiterea de informatii de interes public de catre proprietarii ecranelor). Stabileste zone de publicitate restransa/largita (ex. B-dul Libertatii, Calea Campulung). Contraventiile se sanctioneaza cu amenzi 500-20.000 lei, in functie de tipul incalcarii. Nu s-a gasit o grila de tarife de inchiriere a amplasamentelor.
-autoritate: Primaria Municipiului Targoviste
-act administrativ: HCL Targoviste nr. 106/2014, modificat prin HCL nr. 203/2019
-tip mijloc: firma, panou publicitar, ecran publicitar, publicitate luminoasa, panou publicitar mobil, mobilier urban, banner, steag publicitar, mesh, mesh digital, indicator publicitar directional
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/6.html
-eveniment: 01.01.2019 | regulament | Regulament local de publicitate (act de baza HCL 106/2014, modificat prin HCL 203/2019, conform resources-sources.md); documentul gasit pe site nu are numarul HCL vizibil in text, doar titlul regulamentului | sursa: https://www.pmtgv.ro/Reg%20Publicitate%20modificat%20Dan%20(2).pdf
-
---- CAZ #7 ---
-#: 7
-oras: Bucuresti
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulamentul local pentru autorizarea, construirea si amplasarea mijloacelor de publicitate in municipiul Bucuresti
-pe scurt: Regulamentul general de publicitate al Municipiului Bucuresti (HCGMB 488/2018) permite ecranele digitale (TV-screen), cu reguli: fara sunet, intensitate redusa 35% noaptea, obligatia de a afisa informatii de interes public.
-rezumat: HCGMB 488/2018 reglementeaza amplasarea mijloacelor de publicitate in Bucuresti: defineste zona de publicitate restransa (anexele II A/II B) si zona larga (restul orasului). Capitolul 8 dedica reguli exploatarii ecranelor publicitare (TV-screen): fara echipament audio, intensitate redusa cu 35% noaptea, obligatia proprietarului de a transmite informatii de interes public/situatii de urgenta - deci ecranul digital este explicit permis si reglementat. Mesh-urile digitale sunt definite separat de mesh-ul clasic. Panourile/ecranele amplasate la sol pe domeniul public: suprafata utila maxima 18 mp. Interzisa acoperirea suprafetelor vitrate (exceptie mesh), permisa pe schelele de santier (inclusiv monumente istorice) cu conditii. Nu s-a gasit grila de tarife de inchiriere amplasamente in acest act (probabil in HCGMB 168/2020, netranscris inca in aceasta noapte).
-autoritate: Consiliul General al Municipiului Bucuresti
-act administrativ: HCGMB nr. 488/23.08.2018
-tip mijloc: firma, ecran publicitar (TV-screen), panou publicitar (billboard/backlight/frontlight), mesh, mesh digital, rooftop
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/7.html
-eveniment: 23.08.2018 | regulament | HCGMB nr. 488/23.08.2018; textul integral nu a fost gasit pe doc.pmb.ro (index blocat, calea PDF exacta neghicita in timpul disponibil), s-a folosit o republicare terta (autorizatii-firme-luminoase.ro) cu diacritice corupte (encoding), continutul articolelor fiind altfel identic cu actul citat | sursa: https://www.autorizatii-firme-luminoase.ro/hcgmb-nr-488-din-2018-08-23-privind-aprobarea-regulamentului-local-pentru-autorizarea-construirea-si-amplasarea-mijloacelor-de-publicitate/
-
---- CAZ #8 ---
-#: 8
-oras: Buzau
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Regulamentul local de publicitate privind amplasarea si autorizarea mijloacelor de publicitate pe raza municipiului Buzau
-pe scurt: Regulamentul de publicitate din Buzau (HCL 180/2017) permite ecranul digital (LED/LCD) si mesh-ul digital, cu reguli de distantare minima intre panourile amplasate la sol, in functie de suprafata.
-rezumat: Regulamentul local de publicitate din Buzau (HCL 180/2017) defineste ecranul publicitar (LED/LCD) ca si categorie distincta, permisa, cu obligatia proprietarilor de a transmite informatii de interes public. Mesh-urile si mesh-urile digitale sunt permise. Reguli de distantare pentru panouri la sol: suprafata utila max 2,20 mp - distanta minima 40 m intre ele; suprafata utila max 12 mp - distanta minima 75 m; suprafata utila peste 2,50 mp per fata e tratata distinct. Panouri pe chioscuri: max 2,00-2,20 mp per panou, total max 4,50 mp per chiosc. Nu s-a gasit o grila de tarife de inchiriere (RON) in acest document.
-autoritate: Consiliul Local al Municipiului Buzau
-act administrativ: HCL Buzau nr. 180/2017
-tip mijloc: panou publicitar, ecran publicitar, publicitate luminoasa, mesh, mesh digital, chiosc publicitar
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/8.html
-eveniment: 14.06.2017 | regulament | HCL nr. 180/2017 pentru aprobarea regulamentului local de publicitate | sursa: https://primariabuzau.ro/wp-content/uploads/2017/01/HCL_180_Regulament_publicitate.pdf
-
---- CAZ #9 ---
-#: 9
-oras: Bucuresti
-sectiune: generale
-stadiu: regulament
-status: activ
-titlu: Caiet de sarcini al serviciului public de administrare a domeniului public si privat privind activitatile de publicitate stradala si afisaj din Municipiul Bucuresti
-pe scurt: Actul (Caiet de sarcini) stabileste doar cadrul administrativ de gestiune si tarifare a amplasamentelor de publicitate din Bucuresti — nu fixeaza el insusi ce categorii sau ecrane sunt permise; acestea vin din HCGMB 488/2018.
-rezumat: Caietul de sarcini stabileste cadrul de gestiune (drepturi, obligatii, mod de stabilire si aprobare a tarifelor) pentru serviciul public de administrare a amplasamentelor de publicitate stradala din Bucuresti, fara a fixa el insusi categorii, tarife sau restrictii pentru amplasamente — acestea rezulta din HCGMB 488/2018. Abroga art. 2 din HCGMB 100/2018.
-autoritate: Consiliul General al Municipiului Bucuresti
-act administrativ: HCGMB nr. 168/30.04.2020
-data publicare: 30.04.2020
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/9.html
-eveniment: 30.04.2020 | regulament | HCGMB nr. 168/30.04.2020 aproba caietul de sarcini al serviciului public de administrare a domeniului public si privat pentru publicitate stradala si afisaj; abroga art. 2 din HCGMB nr. 100/22.02.2018 | sursa: https://doc.pmb.ro/monitorul_oficial/2020/3_1/HCGMB_168.pdf
-
---- CAZ #10 ---
-#: 10
-oras: Pitesti
-sectiune: initiale
-stadiu: anunt de licitatie
-status: atribuit
-titlu: Inchiriere integrala a 97 de suprafete de teren (151,38 mp) pentru amplasarea de mijloace publicitare, Municipiul Pitesti
-pe scurt: Pitesti a scos la licitatie inchirierea a 97 de terenuri mici (total 151,38 mp) pentru mijloace publicitare. Termenele (mai 2026) au trecut; primaria a confirmat ca nu mai sunt locuri disponibile.
-rezumat: Municipiul Pitesti a scos la licitatie inchirierea integrala a 97 de terenuri mici (0,66-1,84 mp fiecare, total 151,38 mp) de pe domeniul public, in vederea amplasarii de mijloace publicitare - lista completa de adrese in plansele de amplasament. Anunt publicat 26.03.2026, oferte pana la 06.05.2026, sedinta publica 07.05.2026. Termenele au trecut deja la data acestei arhivari (25-26.09.2026); rezultatul nu a fost inca gasit/citit.
-autoritate: Serviciul Public de Exploatare a Patrimoniului Municipiului Pitesti (SPEPMP)
-act administrativ: HCL Pitesti nr. 56/29.01.2026, rectificata si completata prin HCL nr. 82/26.02.2026 si HCL nr. 109/12.03.2026 (Anexa nr. 101)
-adresa: 97 de amplasamente pe raza municipiului Pitesti (lista completa cu adrese si planse in anexa)
-suprafata mp: 151.38
-numar amplasamente: 97
-tip mijloc: mijloc publicitar
-cost caiet sarcini: 500 RON/exemplar
-data publicare: 26.03.2026
-termen documentatie: 27.04.2026
-termen oferte: 06.05.2026 ora 15:00
-sedinta licitatie: 07.05.2026 ora 10:00
-pagina: https://brandgrowersagents.github.io/romania-licitatii-watch-report/lic/10.html
-eveniment: 26.03.2026 | anunt de licitatie | Anunt de licitatie publicat in Monitorul Oficial al Romaniei, Partea a VI-a, nr. 56/26.03.2026: inchirierea integrala a 97 de suprafete de teren intravilan (1x151,38 mp total) apartinand domeniului public al Municipiului Pitesti, in vederea amplasarii de mijloace publicitare | sursa: https://www.primariapitesti.ro/uploads/articole/files/1_Monitorul_Oficial_56_26.03.20...ului_Municipiului_Pite.ti.pdf
-
-=== FISELE ORASELOR ===
-
---- BUCURESTI ---
-regulament: Bucuresti Sector 6 | act: HCL Sector 6 nr. 53/28.03.2023 | ecran digital permis: DA | verificat: 26.09.2026
-  tipuri permise: afis, banner (interzis pe raza sectorului), ecran publicitar (LED/LCD, dinamic), firma, mesh, panou publicitar
-  regula: bannere interzise pe raza Sectorului 6
-  regula: interzisa pe spatii verzi, locuri de joaca, sediile autoritatilor publice, arbori, carosabil, arbori, cimitire/lacasuri de cult
-  regula: interzisa pe monumente istorice, cu exceptia meshurilor pe schele in timpul lucrarilor de consolidare/restaurare
-  regula: licitatiile pentru amplasamente publicitare pe domeniul public se organizeaza pe grupe de amplasamente, sa acopere intreg arealul sectorului
-regulament: Bucuresti Sector 4 | act: HCLS 4 nr. 168/2022 | ecran digital permis: neclar | verificat: 25.09.2026
-regulament: Bucuresti (PMB/CGMB) | act: HCGMB nr. 488/23.08.2018 | ecran digital permis: DA | verificat: 25.09.2026
-  tipuri permise: firma, ecran publicitar (TV-screen), panou publicitar (billboard/backlight/frontlight), mesh, mesh digital, rooftop
-  regula: ecrane publicitare: fara echipament audio, intensitate redusa 35% noaptea, obligatie transmitere informatii de interes public/situatii de urgenta
-  regula: panouri/ecrane la sol pe domeniul public: suprafata utila maxima 18 mp
-  regula: interzisa acoperirea suprafetelor vitrate (exceptie mesh)
-  regula: permisa pe schele de santier (inclusiv monumente istorice) cu conditii
-  regula: zona de publicitate restransa (anexele II A/II B) si zona largita (restul orasului)
-regulament: Bucuresti (PMB/CGMB) - caiet de sarcini | act: HCGMB nr. 168/30.04.2020 | ecran digital permis: neclar | verificat: 25.09.2026
-
---- ILFOV ---
-inca nimic gasit
-
---- PLOIESTI ---
-info (info): Proiect de interzicere a panourilor/ecranelor publicitare luminoase si LED pe fatade | stare: proiect in consultare publica din 04.2026, stadiu ulterior neconfirmat | Primaria Ploiesti a pus in transparenta decizionala (7.04.2026) un proiect de hotarare, initiat de consilierii PSD Vasile Robescu si Gheorghe Sirbu, care interzice montarea, instalarea si functionarea panourilor/ecranelor luminoase si de tip LED in scop publicitar pe fatadele cladirilor din municipiul Ploiesti (nu vizeaza panourile pe sol sau structurile independente). Motivul invocat: poluare vizuala si luminoasa. Raportul Directiei de Dezvoltare Urbana a fost nefavorabil, aratand ca legislatia (Legea 185/2013 + regulamentul local) reglementeaza deja amplasarea. Perioada de consultare: 10 zile calendaristice de la 7.04.2026. Nu s-a gasit, pana la 26.09.2026, nicio hotarare de consiliu local care sa fi votat acest proiect (nici aprobare, nici respingere) — stadiul actual e necunoscut, posibil ramas doar la faza de consultare sau retras. Nu a fost gasit textul integral al proiectului pe ploiesti.ro (doar anuntul de transparenta decizionala); de cautat direct in arhiva &#x27;Convocari si materiale de sedinta&#x27; a sedintelor de consiliu din aprilie-septembrie 2026. | data: 07.04.2026 | sursa: https://phonline.ro/proiect-pentru-interzicerea-la-ploiesti-a-panourilor-publicitare-luminoase-si-tip-led/
-regulament: Ploiesti | act: HCL Ploiesti nr. 463/25.11.2015 (baza, abroga HCL 105/2010), modificat prin HCL nr. 122/22.04.2016 si HCL nr. 95/2022 | ecran digital permis: DA | verificat: 25.09.2026
-  tipuri permise: firma, panou publicitar, ecran publicitar (luminos sau nu), panou publicitar mobil, mobilier urban, banner/steag publicitar, mesh, indicator publicitar directional, suport publicitate temporara, aviziera publicitara/mica publicitate, vehicul publicitar
-  regula: zona de publicitate largita si zona de publicitate restransa (plansa U2, conform Legii 185/2013)
-  modificare/proiect: HCL 122/22.04.2016: inlocuieste anexa 1 (planse U2/1, U2/2), taxa 50 lei/documentatie amplasare
-  modificare/proiect: propunere de actualizare 2023 (S.C. Petrocons Trading, consultare publica 03-11.04.2023, arhivata din old.ploiesti.ro/Regulament publicitate stradala.zip la cazul #3): pastreaza aceleasi categorii si permite in continuare ecranul digital; nicio HCL de adoptare gasita pana la 26.09.2026
-
---- PITESTI ---
-regulament: Pitesti | act: HCL Pitesti nr. 95/27.02.2025 | ecran digital permis: DA | verificat: 25.09.2026
-  tipuri permise: panou publicitar (backlit), citylight, ecran publicitar digital, mesh/mesh digital pe fatade, indicator publicitar directional
-  regula: mesh pe fatade blocuri de locuit: doar cu acordul asociatiei de proprietari, durata max 90 zile + prelungire 90 zile
-  regula: indicator publicitar directional: suprafata max 1.2x0.8 mp, inaltime minima 3 m, max 2 suporturi identice pe stalp, aviz valabil max 180 zile
-  regula: ecrane publicitare: reducere obligatorie 35% a intensitatii luminii pe timp de noapte
-  regula: panouri/ecrane pe fatade-terase-acoperisuri: necesita autorizatie de construire si expertiza tehnica
-
---- TARGOVISTE ---
-regulament: Targoviste | act: HCL Targoviste nr. 106/2014, modificat prin HCL nr. 203/2019 | ecran digital permis: DA | verificat: 25.09.2026
-  tipuri permise: firma, panou publicitar, ecran publicitar, publicitate luminoasa, panou publicitar mobil, mobilier urban, banner/steag publicitar, mesh, mesh digital, indicator publicitar directional
-  regula: ecrane publicitare: reducere intensitate luminoasa pe timp de noapte, obligatie transmitere informatii de interes public
-  regula: zone de publicitate restransa/largita definite (ex. B-dul Libertatii, Calea Campulung)
-  regula: contraventii: amenzi 500-20000 lei dupa tipul incalcarii
-
---- BUZAU ---
-regulament: Buzau | act: HCL Buzau nr. 180/2017 | ecran digital permis: DA | verificat: 25.09.2026
-  tipuri permise: panou publicitar, ecran publicitar, publicitate luminoasa, mesh, mesh digital, chiosc publicitar
-  regula: panouri la sol suprafata utila max 2.20 mp: distanta minima 40 m intre ele
-  regula: panouri la sol suprafata utila max 12 mp: distanta minima 75 m intre ele
-  regula: chioscuri: panou max 2.00-2.20 mp, total max 4.50 mp per chiosc
-  regula: proprietarii ecranelor publicitare: obligatie transmitere informatii de interes public
-
---- RAMNICU VALCEA ---
-inca nimic gasit
-
---- FOCSANI ---
-regulament: Focsani | act: HCL Focsani nr. 175/19.05.2016 (proiect de modificare 08.12.2017, stare adoptare neverificata) | ecran digital permis: neclar | verificat: 25.09.2026
-  tipuri permise: panou publicitar, mesh, ecran publicitar, firma
-  regula: publicitate temporara pe sol max 30 zile, prelungibila o singura data pentru o perioada egala
-  regula: interzisa pe stalpi de telecomunicatii din lemn si pe cei pentru semafoare
-  regula: permisa pe stalpi de iluminat public si stalpi retea transport in comun
-  regula: distanta minima 2 m fata de limita proprietatilor private fara acordul proprietarului
-  regula: interzisa in incinta cimitirelor, lacasurilor de cult, parcurilor si gradinilor publice
-  modificare/proiect: proiect de modificare 08.12.2017 (definitii, publicitate temporara, restrictii amplasare)
+=== ORASE ===
+Bucuresti:
+  regulament Bucuresti Sector 6: HCL Sector 6 nr. 53/28.03.2023 | ecran digital: DA
+    - bannere interzise pe raza Sectorului 6
+    - interzisa pe spatii verzi, locuri de joaca, sediile autoritatilor publice, arbori, carosabil, arbori, cimitire/lacasuri de cult
+    - interzisa pe monumente istorice, cu exceptia meshurilor pe schele in timpul lucrarilor de consolidare/restaurare
+  regulament Bucuresti Sector 4: HCLS 4 nr. 168/2022 | ecran digital: neclar
+  regulament Bucuresti (PMB/CGMB): HCGMB nr. 488/23.08.2018 | ecran digital: DA
+    - ecrane publicitare: fara echipament audio, intensitate redusa 35% noaptea, obligatie transmitere informatii de interes public/situatii de urgenta
+    - panouri/ecrane la sol pe domeniul public: suprafata utila maxima 18 mp
+    - interzisa acoperirea suprafetelor vitrate (exceptie mesh)
+  regulament Bucuresti (PMB/CGMB) - caiet de sarcini: HCGMB nr. 168/30.04.2020 | ecran digital: neclar
+Ilfov: inca nimic gasit
+Ploiesti:
+  regulament Ploiesti: HCL Ploiesti nr. 463/25.11.2015 (baza, abroga HCL 105/2010), modificat prin HCL nr. 122/22.04.2016 si HCL nr. 95/2022 | ecran digital: DA
+    - zona de publicitate largita si zona de publicitate restransa (plansa U2, conform Legii 185/2013)
+    modificare/proiect: HCL 122/22.04.2016: inlocuieste anexa 1 (planse U2/1, U2/2), taxa 50 lei/documentatie amplasare
+    modificare/proiect: propunere de actualizare 2023 (S.C. Petrocons Trading, consultare publica 03-11.04.2023, arhivata din old.ploiesti.ro/Regulament publicitate stradala.zip la cazul #3): pastreaza aceleasi categorii si permite in continuare ecranul digital; nicio HCL de adoptare gasita pana la 26.09.2026
+  info: Proiect de interzicere a panourilor/ecranelor publicitare luminoase si LED pe fatade | stare: proiect in consultare publica din 04.2026, stadiu ulterior neconfirmat | Primaria Ploiesti a pus in transparenta decizionala (7.04.2026) un proiect de hotarare, initiat de consilierii PSD Vasile Robescu si Gheorghe Sirbu, care interzice montarea, instalarea si functionarea panourilor/ecranelor luminoase si de tip LED in scop publicitar pe fatadele cladirilor din municipiul Ploiesti (nu vizeaza panourile pe sol sau structurile independente). Motivul invocat: poluare vizuala si luminoasa.
+Pitesti:
+  regulament Pitesti: HCL Pitesti nr. 95/27.02.2025 | ecran digital: DA
+    - mesh pe fatade blocuri de locuit: doar cu acordul asociatiei de proprietari, durata max 90 zile + prelungire 90 zile
+    - indicator publicitar directional: suprafata max 1.2x0.8 mp, inaltime minima 3 m, max 2 suporturi identice pe stalp, aviz valabil max 180 zile
+    - ecrane publicitare: reducere obligatorie 35% a intensitatii luminii pe timp de noapte
+Targoviste:
+  regulament Targoviste: HCL Targoviste nr. 106/2014, modificat prin HCL nr. 203/2019 | ecran digital: DA
+    - ecrane publicitare: reducere intensitate luminoasa pe timp de noapte, obligatie transmitere informatii de interes public
+    - zone de publicitate restransa/largita definite (ex. B-dul Libertatii, Calea Campulung)
+    - contraventii: amenzi 500-20000 lei dupa tipul incalcarii
+Buzau:
+  regulament Buzau: HCL Buzau nr. 180/2017 | ecran digital: DA
+    - panouri la sol suprafata utila max 2.20 mp: distanta minima 40 m intre ele
+    - panouri la sol suprafata utila max 12 mp: distanta minima 75 m intre ele
+    - chioscuri: panou max 2.00-2.20 mp, total max 4.50 mp per chiosc
+Ramnicu Valcea: inca nimic gasit
+Focsani:
+  regulament Focsani: HCL Focsani nr. 175/19.05.2016 (proiect de modificare 08.12.2017, stare adoptare neverificata) | ecran digital: neclar
+    - publicitate temporara pe sol max 30 zile, prelungibila o singura data pentru o perioada egala
+    - interzisa pe stalpi de telecomunicatii din lemn si pe cei pentru semafoare
+    - permisa pe stalpi de iluminat public si stalpi retea transport in comun
+    modificare/proiect: proiect de modificare 08.12.2017 (definitii, publicitate temporara, restrictii amplasare)
 
 === UPDATES (ultimele 90 zile) ===
-#2 | STADIU NOU | Stadiu nou: proiect de hotarare (era regulament) | detectat 25.09.2026</pre><footer>Pagina generata automat din surse publice. Nu este indexata de motoarele de cautare.</footer></div>
-<script>
-(function(){var t=new Date();t.setHours(0,0,0,0);
-document.querySelectorAll('[data-deadline]').forEach(function(el){
- var p=el.getAttribute('data-deadline').split('-');var d=new Date(+p[0],+p[1]-1,+p[2]);
- var n=Math.round((d-t)/86400000);el.classList.remove('ok','warn','bad');
- if(n<0){el.textContent='termen depasit';el.classList.add('bad')}
- else{el.textContent='⏳ '+n+(n===1?' zi ramasa':' zile ramase');el.classList.add(n<=7?'warn':'ok')}});
-document.querySelectorAll('details.city[open]').forEach(function(d){d.open=false});
-var h=location.hash.slice(1);if(h){var el=document.getElementById(h);if(el){for(var p=el.parentElement;p;p=p.parentElement){if(p.tagName==='DETAILS')p.open=true}
- el.classList.add('hl');setTimeout(function(){el.scrollIntoView({block:'center'})},30)}}})();
-</script>
-</body></html>
+#2 | STADIU NOU | Stadiu nou: proiect de hotarare (era regulament) | detectat 25.09.2026</pre></body></html>
